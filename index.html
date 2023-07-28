@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form mini project</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script
+      type="module"
+      src="node_modules/postcode/dist/index.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <h1>Send us a message!</h1>
+    <form>
+      <ul>
+        <li>
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+          <span class="error" id="name-error"></span>
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+          <span class="error" id="email-error"></span>
+        </li>
+        <li>
+          <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="uk">United Kingdom</option>
+            <option value="indonesia">Indonesia</option>
+            <span class="error" id="country-error"></span>
+          </select>
+        </li>
+        <li>
+          <label for="postcode">Postcode</label>
+          <input type="text" id="postcode" required />
+          <span class="error" id="postcode-error"></span>
+        </li>
+        <li>
+          <label for="password">Password</label>
+          <input type="password" id="password" minlength="8" required />
+          <ul class="error" id="password-error">
+            <li id="blank-error"></li>
+            <li id="length-error"></li>
+            <li id="number-error"></li>
+            <li id="capital-error"></li>
+            <li id="symbol-error"></li>
+          </ul>
+        </li>
+        <li>
+          <label for="confirm-password">Confirm password</label>
+          <input type="password" id="confirm-password" required />
+          <span class="error" id="confirm-password-error"></span>
+        </li>
+        <li>
+          <button>Submit</button>
+        </li>
+      </ul>
+    </form>
+  </body>
+</html>
